@@ -1,0 +1,29 @@
+Data Dictionary for Batters
+
+
+1) Player: The name of the batter
+2) Position: The defensive position in the field played by the batter. A batter can play multiple positions, where a ',' would separate the different positions the batter plays.
+3) Rk: A batter's ranking for a season, in terms of total fantasy points scored
+4) Age: the batter's age
+5) FPts: the total amount of fantasy points scored over the season
+6) FP/G: fantasy points scored per game
+7) GP: Games Played
+8) AB: total number of at bats
+9) R: runs scored
+10) H: hits
+11) 2B: doubles
+12) 3B: triples
+13) HR: home runs
+14) RBI: runs batted in
+15) OBP: on base percentage
+16) SLG: slugging percentage
+17) OPS: on base plus slugging. OPS = OBP + SLG.
+18) RC: runs created
+19) TB: total bases
+20) XBH: extra base hits
+21) PA: plate appearances
+22) BB/PA: walks per plate appearance
+23) K/PA: strikeouts per plate appearance
+24) ISO: isolated power. ISO = SLG - AVG.
+25) BABIP: Batting Average Balls in Play
+26) WOBA: Weighted On Base Average
