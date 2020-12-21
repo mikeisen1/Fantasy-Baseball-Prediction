@@ -4551,7 +4551,7 @@ form{
   .bp3-running-text table th, table.bp3-html-table th{
     color:#182026;
     font-weight:600; }
-  
+
   .bp3-running-text table td,
   table.bp3-html-table td{
     color:#182026; }
@@ -14238,17 +14238,17 @@ a.anchor-link {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 },
                 "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14269,7 +14269,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="fantasy-img.png" alt="Fantrax Fantasy Baseball" style="margin: auto;width: 75%;"></p>
+<img src="fantasy-img.png" alt="Fantrax Fantasy Baseball" style="margin: auto;width: 75%;">
 
 </div>
 </div>
@@ -14385,13 +14385,13 @@ a.anchor-link {
          <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span><span class="s1">&#39;FPts&#39;</span><span class="p">])</span>
 
 <span class="n">drop2</span> <span class="o">=</span> <span class="p">((</span><span class="nb">set</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span> <span class="o">|</span>
-         <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span><span class="s1">&#39;FPts&#39;</span><span class="p">])</span> 
+         <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span><span class="s1">&#39;FPts&#39;</span><span class="p">])</span>
 
 <span class="c1">#dropping duplicate columns and merging the batters data together, leaving</span>
 <span class="c1">#one dataframe for batters for each year 2015-2020.</span>
 <span class="k">def</span> <span class="nf">convert_to_float</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">column</span><span class="p">):</span>
     <span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-    
+
 <span class="k">def</span> <span class="nf">convert_to_int</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">column</span><span class="p">):</span>
     <span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 
@@ -14425,7 +14425,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stats_to_int</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rk&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;GP&#39;</span><span class="p">,</span> <span class="s1">&#39;AB&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;2B&#39;</span><span class="p">,</span> <span class="s1">&#39;3B&#39;</span><span class="p">,</span> <span class="s1">&#39;HR&#39;</span><span class="p">,</span> <span class="s1">&#39;RBI&#39;</span><span class="p">,</span> <span class="s1">&#39;BB&#39;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stats_to_int</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rk&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;GP&#39;</span><span class="p">,</span> <span class="s1">&#39;AB&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;2B&#39;</span><span class="p">,</span> <span class="s1">&#39;3B&#39;</span><span class="p">,</span> <span class="s1">&#39;HR&#39;</span><span class="p">,</span> <span class="s1">&#39;RBI&#39;</span><span class="p">,</span> <span class="s1">&#39;BB&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;SO&#39;</span><span class="p">,</span> <span class="s1">&#39;SB&#39;</span><span class="p">,</span> <span class="s1">&#39;CS&#39;</span><span class="p">,</span> <span class="s1">&#39;RC&#39;</span><span class="p">,</span> <span class="s1">&#39;TB&#39;</span><span class="p">,</span> <span class="s1">&#39;XBH&#39;</span><span class="p">,</span> <span class="s1">&#39;PA&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">]</span>
 <span class="n">stats_to_float</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FP/G&#39;</span><span class="p">,</span> <span class="s1">&#39;FPts&#39;</span><span class="p">,</span><span class="s1">&#39;AVG&#39;</span><span class="p">,</span> <span class="s1">&#39;OBP&#39;</span><span class="p">,</span> <span class="s1">&#39;SLG&#39;</span><span class="p">,</span> <span class="s1">&#39;OPS&#39;</span><span class="p">,</span> <span class="s1">&#39;BB/PA&#39;</span><span class="p">,</span> <span class="s1">&#39;K/PA&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">,</span> <span class="s1">&#39;BABIP&#39;</span><span class="p">,</span> <span class="s1">&#39;WOBA&#39;</span><span class="p">]</span>
 
@@ -14437,7 +14437,7 @@ a.anchor-link {
         <span class="n">stats</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">stats</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">stats</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;AB&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">125</span><span class="p">]</span>
     <span class="n">stats</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
     <span class="n">stats</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
-    
+
 <span class="c1">#age is initially constant for a player regardless of year, so that is fixed here</span>
 <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span><span class="mi">2020</span><span class="p">):</span>
     <span class="n">stats</span><span class="p">[</span><span class="n">year</span><span class="p">][</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stats</span><span class="p">[</span><span class="n">year</span><span class="p">][</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2020</span> <span class="o">-</span> <span class="n">year</span><span class="p">)</span>
@@ -14507,7 +14507,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14569,7 +14569,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14624,7 +14624,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14709,7 +14709,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14743,7 +14743,7 @@ a.anchor-link {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 <span class="n">patches</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">scoring</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;2B&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;HBP&#39;</span> <span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;HR&#39;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;RBI&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1B&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;2B&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> 
+<span class="n">scoring</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;2B&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;HBP&#39;</span> <span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;HR&#39;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;RBI&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1B&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;2B&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
          <span class="s1">&#39;SO&#39;</span> <span class="p">:</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;3B&#39;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;BB&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="s1">&#39;SB&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
 <span class="n">to_plot</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;1B&#39;</span><span class="p">:</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">:</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="s1">&#39;2B&#39;</span> <span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;3B&#39;</span> <span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;HR&#39;</span> <span class="p">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span><span class="s1">&#39;RBI&#39;</span> <span class="p">:</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span>
          <span class="s1">&#39;BB&#39;</span><span class="p">:</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span><span class="s1">&#39;SB&#39;</span><span class="p">:</span><span class="s1">&#39;olive&#39;</span><span class="p">}</span>
@@ -14753,7 +14753,7 @@ a.anchor-link {
 <span class="n">mean_batters</span> <span class="o">=</span> <span class="n">mean_batters</span><span class="p">[[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;GP&#39;</span><span class="p">,</span><span class="s1">&#39;FPts&#39;</span><span class="p">,</span><span class="s1">&#39;FP/G&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="s1">&#39;1B&#39;</span><span class="p">,</span><span class="s1">&#39;2B&#39;</span><span class="p">,</span><span class="s1">&#39;3B&#39;</span><span class="p">,</span><span class="s1">&#39;HR&#39;</span><span class="p">,</span><span class="s1">&#39;RBI&#39;</span><span class="p">,</span><span class="s1">&#39;BB&#39;</span><span class="p">,</span><span class="s1">&#39;SB&#39;</span><span class="p">]]</span>
 
 <span class="k">for</span> <span class="n">stat</span> <span class="ow">in</span> <span class="n">to_plot</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="n">mean_batters</span><span class="p">[</span><span class="n">stat</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_batters</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span> <span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="n">stat</span><span class="p">]</span><span class="o">*</span><span class="n">scoring</span><span class="p">[</span><span class="n">stat</span><span class="p">]</span><span class="o">/</span><span class="mi">162</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2020</span> 
+    <span class="n">mean_batters</span><span class="p">[</span><span class="n">stat</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_batters</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span> <span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="n">stat</span><span class="p">]</span><span class="o">*</span><span class="n">scoring</span><span class="p">[</span><span class="n">stat</span><span class="p">]</span><span class="o">/</span><span class="mi">162</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">2020</span>
                                             <span class="k">else</span> <span class="n">row</span><span class="p">[</span><span class="n">stat</span><span class="p">]</span><span class="o">*</span><span class="n">scoring</span><span class="p">[</span><span class="n">stat</span><span class="p">]</span><span class="o">/</span><span class="mi">60</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">stat</span> <span class="ow">in</span> <span class="n">to_plot</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
@@ -14780,7 +14780,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14837,7 +14837,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14894,7 +14894,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14953,7 +14953,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15023,10 +15023,10 @@ a.anchor-link {
     <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="n">predictors</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
     <span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;FP/G&#39;</span><span class="p">],</span> <span class="n">predictions</span><span class="p">)</span>
     <span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;FP/G&#39;</span><span class="p">],</span><span class="n">predictions</span><span class="p">)</span>
-    
+
     <span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
     <span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
-    
+
     <span class="n">model_name</span> <span class="o">=</span> <span class="s2">&quot;Model &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">df_list</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Model_Name&#39;</span> <span class="p">:</span> <span class="n">model_name</span><span class="p">,</span> <span class="s1">&#39;r2&#39;</span> <span class="p">:</span> <span class="n">r2</span><span class="p">,</span> <span class="s1">&#39;mse&#39;</span> <span class="p">:</span> <span class="n">mse</span><span class="p">})</span>
 
@@ -15046,10 +15046,10 @@ a.anchor-link {
 
 <span class="k">for</span> <span class="n">plot</span> <span class="ow">in</span> <span class="n">plot_lst</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">plot</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
-        <span class="n">plot</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">(),</span> <span class="s1">&#39;.3f&#39;</span><span class="p">),</span> 
-                       <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">()),</span> 
-                       <span class="n">ha</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> 
-                       <span class="n">xytext</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> 
+        <span class="n">plot</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">(),</span> <span class="s1">&#39;.3f&#39;</span><span class="p">),</span>
+                       <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">get_height</span><span class="p">()),</span>
+                       <span class="n">ha</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span>
+                       <span class="n">xytext</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
                        <span class="n">textcoords</span> <span class="o">=</span> <span class="s1">&#39;offset points&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -15066,7 +15066,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
